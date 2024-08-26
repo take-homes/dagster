@@ -20,6 +20,14 @@ Using Dagster's UI, you can explore your data assets, manually launch runs, and 
 Let's launch the dagster server:
 <button data-command="run:dagster dev">Run `dagster dev`</button>
 
+<insert-text file="tutorial/assets.py" line="0" col="0">
+
+```python
+print("hello world"
+```
+
+</insert-text>
+
 You should see a screen that looks similar to below. If you do not see it, go the top navigation bar, click on **Assets**, then go the top-right region and click on **View global asset lineage**. As more assets are built, this graph will show your entire data platform in one place. This page can also be referred to as the **Global Asset Lineage**.
 
 ![image info](https://docs.dagster.io/_next/image?url=%2Fimages%2Ftutorial%2Fdefault-ui.png&w=3840&q=75)
