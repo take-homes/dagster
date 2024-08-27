@@ -20,10 +20,10 @@ Using Dagster's UI, you can explore your data assets, manually launch runs, and 
 Let's launch the dagster server:
 <button data-command="run:dagster dev">Run `dagster dev`</button>
 
-<insert-text file="tutorial/assets.py" line="0" col="0">
+<insert-text file="tutorial/assets.py" line="15" col="0">
 
 ```python
-print("hello world"
+@asset
 ```
 
 </insert-text>
