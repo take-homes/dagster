@@ -37,12 +37,11 @@ To get started, let's explore some code:
 In the function `topstory_ids()`, we fetch data from the Hacker News API, create a list of integers representing the IDs for the current top stories on Hacker News and finally, store them in a file called `data/topstory_ids.json`.
 
 Adding the `@asset` decorator from the `dagster` library is all it takes to let Dagster know that this is an asset.
-<insert-text file="tutorial/assets.py" line="15" col="1">
 
+<insert-text file="./tutorial/assets.py" line="15" col="0">
 ```python
 @asset
 ```
-
 </insert-text>
 
 ### Exploring the Dagster UI
@@ -82,12 +81,11 @@ Let's return to our code and check out the function `topstories()`:
 Dependencies between assets are defined using the deps parameter of the @asset decorator. In this case, `topstory_ids` (the list of IDs) is a dependency of `topstories` (the CSV file).
 
 Let's update the code to reflect this:
-<insert-text file="tutorial/assets.py" line="30" col="1">
 
+<insert-text file="tutorial/assets.py" line="30" col="0">
 ```python
 @asset(deps=[topstory_ids])  # this asset is dependent on topstory_ids
 ```
-
 </insert-text>
 
 After clicking the **Reload Definitions** button in the UI, you can check the asset graph to see the relationship between your assets.
@@ -99,13 +97,12 @@ Along with structured data like tables, Dagster's assets can also be unstructure
 See `most_frequent_words`:
 <button data-command="open:tutorial/assets.py">Open `assets.py`</button>
 
-Lets update the mark this function as an aset:
-<insert-text file="tutorial/assets.py" line="45" col="1">
+Lets update the mark this function as an asset:
 
+<insert-text file="tutorial/assets.py" line="45" col="0">
 ```python
 @asset(deps=[topstory_ids])
 ```
-
 </insert-text>
 
 ### Educating users with metadata
